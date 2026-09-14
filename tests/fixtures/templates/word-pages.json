@@ -1,0 +1,51 @@
+{
+  "_comment": "Число страниц измерено вживую через Word COM (ComputeStatistics(wdStatisticPages)) при разработке WP4 для 6.33-production. sha256 -- отпечаток файла на момент измерения; test_templates_metadata_633.py сверяет его при каждом запуске и падает, если файл изменился без повторного замера в Word. official=true -- файлы, которые WP4 не имеет права менять (methodology-09-03-02-2024.docx, implementation-certificate-imo-2024.docx); их хеш и число страниц записаны как контроль на случайную правку.",
+  "measured_with": "Microsoft Word (COM), A4, ComputeStatistics(2)",
+  "files": {
+    "template-mpgu.docx": {
+      "sha256": "9aa6e30d50964226e06e75820359abf134d53b1c68912e142261590d7c7f3719",
+      "pages": 1,
+      "official": false
+    },
+    "titlepage-universal.docx": {
+      "sha256": "4cbae4f6fb2d6e14805279f7b3ce311c2501aebbb479fd88beaf251fb4dfafd8",
+      "pages": 1,
+      "official": false
+    },
+    "titlepage-09-03-02-imo.docx": {
+      "sha256": "f3ec51692b5db366a47b271af9555bf7e1292982f9f85e71b888acf51ef52157",
+      "pages": 1,
+      "official": false
+    },
+    "oath-template.docx": {
+      "sha256": "32704cb7b67d33baace1867817ac6df562212f66d090e7275b88eeeab94e4341",
+      "pages": 1,
+      "official": false
+    },
+    "oath-template-collective.docx": {
+      "sha256": "05b8da8489e274f0bc38e8187624cca0f1b890aeabd8f8050a844a9f8ecefcce",
+      "pages": 1,
+      "official": false
+    },
+    "permission-template.docx": {
+      "sha256": "238202c5304bec79994cae1c7ef29fc40c5bc17ff07897e75743a653d94cd0a4",
+      "pages": 2,
+      "official": false
+    },
+    "implementation-certificate.docx": {
+      "sha256": "f1927d30125fbaad94aa1b176ad3b73c1dfdbff42b1e4e6b40455074c57cb148",
+      "pages": 2,
+      "official": false
+    },
+    "methodology-09-03-02-2024.docx": {
+      "sha256": "8d890c1474c0621a8e5259b514126935c92d94393127c2d27094fa80cb447eae",
+      "pages": 17,
+      "official": true
+    },
+    "implementation-certificate-imo-2024.docx": {
+      "sha256": "743be778546b6aceb81c61b721d8984a7b0f41abae5ac8e85021911e4ab63fe5",
+      "pages": 1,
+      "official": true
+    }
+  }
+}

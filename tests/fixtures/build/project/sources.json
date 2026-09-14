@@ -1,0 +1,102 @@
+[
+  {
+    "id": 3,
+    "type": "book",
+    "authors": ["Яковлев А.В."],
+    "title": "Методика обучения стереометрии",
+    "place": "М.",
+    "publisher": "Просвещение",
+    "year": 2019,
+    "pages": 240,
+    "status": "confirmed",
+    "verification": {"checked_at": "2026-09-01T10:00:00+03:00", "method": "catalog", "url": "", "note": "каталог РГБ"}
+  },
+  {
+    "id": "unity-docs",
+    "type": "software_doc",
+    "authors": ["Unity Technologies"],
+    "title": "Unity Manual",
+    "subtitle": "XR Interaction Toolkit",
+    "url": "https://docs.unity3d.com/Manual/XR.html",
+    "access_date": "15.03.2026",
+    "status": "confirmed"
+  },
+  {
+    "id": "yolkin2021",
+    "type": "article",
+    "authors": ["Ёлкин Д.А.", "Жукова Е.В."],
+    "title": "Виртуальная реальность в обучении геометрии",
+    "journal": "Информатика и образование",
+    "year": 2021,
+    "number": 4,
+    "pages": "34-41",
+    "status": "confirmed"
+  },
+  {
+    "id": "law273",
+    "type": "normative",
+    "title": "Об образовании в Российской Федерации",
+    "doc_type": "федер. закон",
+    "date": "29.12.2012",
+    "number": "273-ФЗ",
+    "source": "Доступ из справ.-правовой системы «КонсультантПлюс»",
+    "status": "confirmed"
+  },
+  {
+    "id": "egorov2020",
+    "type": "book",
+    "authors": ["Егоров И.П."],
+    "title": "Пространственное мышление школьников",
+    "place": "СПб.",
+    "publisher": "Питер",
+    "year": 2020,
+    "pages": 180,
+    "status": "confirmed"
+  },
+  {
+    "id": "smith2019",
+    "type": "article",
+    "authors": ["Smith J.", "Brown K."],
+    "title": "Immersive learning environments",
+    "journal": "Computers & Education",
+    "year": 2019,
+    "volume": 140,
+    "pages": "103-115",
+    "doi": "10.1016/j.compedu.2019.103603",
+    "status": "confirmed"
+  },
+  {
+    "id": "abramova2022",
+    "type": "collection_article",
+    "authors": ["Абрамова Т.Н."],
+    "title": "Цифровые тренажёры в школе",
+    "container_title": "Информатизация образования: сб. науч. тр.",
+    "editors": ["Петров В.Г."],
+    "place": "М.",
+    "publisher": "МПГУ",
+    "year": 2022,
+    "pages": "12-19",
+    "status": "confirmed"
+  },
+  {
+    "id": "fgos",
+    "type": "normative",
+    "title": "Об утверждении федерального государственного образовательного стандарта основного общего образования",
+    "doc_type": "Приказ Минпросвещения России",
+    "date": "31.05.2021",
+    "number": "287",
+    "source": "Доступ из справ.-правовой системы «КонсультантПлюс»",
+    "status": "confirmed"
+  },
+  {
+    "id": "zhukov2023",
+    "type": "electronic",
+    "authors": ["Жуков С.С."],
+    "title": "Обзор VR-гарнитур для образования",
+    "journal": "Хабр",
+    "year": 2023,
+    "url": "https://habr.com/ru/articles/700001/",
+    "access_date": "10.02.2026",
+    "status": "pending"
+  }
+]

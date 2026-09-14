@@ -1,0 +1,6 @@
+interface:
+  display_name: "ВКР МПГУ"
+  short_description: "Написание, проверка и оформление ВКР"
+  default_prompt: "Use $vkr-mpgu to help me prepare, review, or format my thesis."
+policy:
+  allow_implicit_invocation: true

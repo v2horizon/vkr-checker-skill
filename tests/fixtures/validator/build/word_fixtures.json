@@ -1,0 +1,39 @@
+{
+  "annotation": "Аннотация",
+  "introduction": "Введение",
+  "contents": "Содержание",
+  "conclusion": "Заключение",
+  "appendix2": "Приложение 2",
+  "plain_number_pattern": "^(Простой номер|Plain Number) 2$",
+  "auto_toc_pattern": "^(Автособираемое оглавление|Automatic Table) 1$",
+  "header_marker": "[ТРЕБУЕТ УТОЧНЕНИЯ] шифр работы",
+  "footnote_text": "Описание API приведено в работе J. Nielsen [6].",
+  "replacements": [
+    {
+      "name": "bad_arabic_chapter",
+      "find": "Глава II. Анализ условий",
+      "replace": "Глава 2. Анализ условий"
+    },
+    {
+      "name": "bad_arabic_chapter_normal_bold",
+      "find": "Глава III. Проектирование",
+      "replace": "Глава 3. Проектирование",
+      "normal_bold": true
+    },
+    {
+      "name": "bad_heading_trailing_dot",
+      "find": "3.1. Пилотное тестирование",
+      "replace": "3.1. Пилотное тестирование."
+    },
+    {
+      "name": "bad_citation_after_period",
+      "find": "снизилось [5, с. 23–25].",
+      "replace": "снизилось. [5, с. 23–25]"
+    },
+    {
+      "name": "bad_chapter_duplicate_prefix",
+      "find": "Глава I. Теоретические",
+      "replace": "Глава I. Глава I. Теоретические"
+    }
+  ]
+}

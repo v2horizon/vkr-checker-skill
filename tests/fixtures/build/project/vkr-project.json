@@ -1,0 +1,30 @@
+{
+  "skill_version": "6.33-production",
+  "protocol_version": "6.33",
+  "created_at": "2026-09-13T12:00:00+03:00",
+  "vkr_type": "project",
+  "profile": "mpgu-09-project",
+  "mode": "standard",
+  "audit_intensity": "strict",
+  "topic": "Разработка VR-тренажёра по стереометрии для учащихся 7–9 классов",
+  "deadline": "",
+  "collective": false,
+  "members": [],
+  "title_page": {
+    "university": "Московский педагогический государственный университет",
+    "institute": "Институт математики и информатики",
+    "department": "кафедра информатики и методики обучения информатике",
+    "program_code": "09.03.02",
+    "program_name": "Информационные системы и технологии",
+    "program_profile": "Разработка игр и виртуальной реальности",
+    "work_type": "Выпускная квалификационная работа",
+    "author": "Лебедева Анна Сергеевна",
+    "group": "ИСТ-41",
+    "supervisor": "П.С. Кузнецов",
+    "supervisor_title": "доцент, канд. пед. наук",
+    "head_of_department": "М.И. Орлов",
+    "head_title": "д-р пед. наук, профессор",
+    "city": "Москва",
+    "year": "2026"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "description": "Фикстуры validate_vkr 6.33. Все DOCX сохранены Microsoft Word 16 (16.0.20131) через COM: build/word_fixtures.ps1. Тестам Word не нужен.",
+  "pipeline": [
+    "python build/make_inputs.py <каталог с create_vkr_docx.py и format_bibliography.py из коммита 0eb3728 (6.32)> <in>",
+    "powershell -File build/word_fixtures.ps1 -InDir <in> -OutDir <out>",
+    "python build/xml_variants.py <out>/gen_project_word.docx <in>",
+    "powershell -File build/word_fixtures.ps1 -InDir <in> -OutDir <out> -Only docdefaults"
+  ],
+  "fixtures": {
+    "gen_project_word.docx": {"created": "word-com", "source": "генератор 6.32 (project_small из make_inputs.py)", "operation": "TablesOfContents(1).Update, Fields.Update, SaveAs2"},
+    "ok_pagenum_building_block.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "нижний колонтитул очищен, вставлен стандартный блок «Простой номер 2» (w:sdt, docPartGallery Page Numbers (Bottom of Page))"},
+    "ok_toc_sdt.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "поле TOC и заголовок «Содержание» удалены, вставлен блок «Автособираемое оглавление 1» (w:sdt Table of Contents), обновлён"},
+    "ok_title_section.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "разрыв страницы после титула заменён разрывом раздела; раздел 1 без колонтитула и без titlePg, раздел 2 с PAGE, нумерация продолжается"},
+    "ok_headings_recolored_auto.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "стили Заголовок 1/2 перекрашены в тему accent1, у абзацев заголовков Font.Color = wdColorAutomatic"},
+    "bad_headings_blue.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "стили Заголовок 1/2 перекрашены в accent1, прямое форматирование заголовков сброшено (Font.Reset)"},
+    "ok_spec8_styles.docx": {"created": "python-docx + word-com", "source": "kitchen.docx из make_inputs.py", "operation": "стили SPEC 8, блок «Простой номер 2», сноска с [6], альбомный раздел для Приложения 2 (Word повернул поля), обновление оглавления и полей"},
+    "ok_docdefaults_spacing15.docx": {"created": "xml + word-com", "source": "gen_project_word.docx", "operation": "интервал убран из Normal, в docDefaults line=360; пересохранён Word"},
+    "ok_docdefaults_font_tnr14.docx": {"created": "xml + word-com", "source": "gen_project_word.docx", "operation": "шрифт и размер убраны из Normal, в docDefaults Times New Roman 14; пересохранён Word"},
+    "ok_docdefaults_indent125.docx": {"created": "xml + word-com", "source": "gen_project_word.docx", "operation": "отступ убран из Normal, в docDefaults firstLine=709; пересохранён Word"},
+    "bad_docdefaults_spacing_single.docx": {"created": "xml + word-com", "source": "gen_project_word.docx", "operation": "интервал убран из Normal, в docDefaults line=240"},
+    "bad_docdefaults_font_arial12.docx": {"created": "xml + word-com", "source": "gen_project_word.docx", "operation": "шрифт и размер убраны из Normal, в docDefaults Arial 12"},
+    "bad_docdefaults_indent0.docx": {"created": "xml + word-com", "source": "gen_project_word.docx", "operation": "отступ убран из Normal, в docDefaults firstLine=0"},
+    "bad_margin_left30.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "Sections(1).PageSetup.LeftMargin = 30 мм"},
+    "bad_normal_font_arial.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "Styles(wdStyleNormal).Font.Name = Arial"},
+    "bad_normal_size12.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "Styles(wdStyleNormal).Font.Size = 12"},
+    "bad_normal_spacing_single.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "Styles(wdStyleNormal).ParagraphFormat.LineSpacingRule = wdLineSpaceSingle"},
+    "bad_normal_indent0.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "Styles(wdStyleNormal).ParagraphFormat.FirstLineIndent = 0"},
+    "bad_body_align_left.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "абзацам основного текста длиннее 100 знаков Alignment = влево"},
+    "bad_no_page_field.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "основной нижний колонтитул очищен"},
+    "bad_title_page_number.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "в колонтитул первой страницы (титул) вставлено поле PAGE"},
+    "bad_letter.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "PageSetup.PaperSize = wdPaperLetter"},
+    "bad_marker_in_header.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "в верхний колонтитул записано «[ТРЕБУЕТ УТОЧНЕНИЯ] шифр работы»"},
+    "bad_second_section_margins.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "разрыв раздела перед «Заключением», во втором разделе поля 15/25 мм"},
+    "bad_arabic_chapter.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "Find/Replace «Глава II.» → «Глава 2.» (стиль Заголовок 1)"},
+    "bad_arabic_chapter_normal_bold.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "«Глава III.» → «Глава 3.», абзац переведён в стиль Обычный, полужирный, по центру"},
+    "bad_heading_trailing_dot.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "к заголовку «3.1. Пилотное тестирование» добавлена точка"},
+    "bad_citation_after_period.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "«снизилось [5, с. 23–25].» → «снизилось. [5, с. 23–25]»"},
+    "bad_chapter_duplicate_prefix.docx": {"created": "word-com", "source": "gen_project_word.docx", "operation": "«Глава I. Теоретические» → «Глава I. Глава I. Теоретические»"},
+    "bad_bibliography_unsorted.docx": {"created": "word-com", "source": "генератор 6.32, те же источники в неалфавитном порядке с номерами 1..6", "operation": "TablesOfContents(1).Update, Fields.Update, SaveAs2"},
+    "bad_trailing_empty_page.docx": {"created": "word-com", "source": "генератор 6.32 с skip_last_page: true (после приложения остаётся разрыв страницы)", "operation": "TablesOfContents(1).Update, Fields.Update, SaveAs2"}
+  }
+}
