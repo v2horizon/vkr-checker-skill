@@ -91,7 +91,7 @@
   точки входа для других инструментов: `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`,
   `.cursor/rules/vkr-mpgu.mdc`, `.github/copilot-instructions.md`.
 
-Техники обхода детекторов ИИ из прежних версий в 6.33 не расширялись.
+Стилистическая система против детекторов ИИ и Антиплагиата сохранена без изменений (`references/humanizer-techniques.md`, `references/originality-techniques.md`, `data/ai_cliches.json`, `scripts/ai_detection_heuristic.py`) и не расширялась; технические трюки обхода (латиница, скрытый текст, символы нулевой ширины, синонимайзеры) скилл не применяет.
 
 ## Как проверено
 
